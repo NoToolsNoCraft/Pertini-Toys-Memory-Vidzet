@@ -1,12 +1,12 @@
 const iconsType1 = [
-    './images/Vulkan/image1.jpg',
-    './images/Vulkan/image2.jpg',
-    './images/Vulkan/image3.jpg',
-    './images/Vulkan/image4.jpg',
-    './images/Vulkan/image5.jpg',
-    './images/Vulkan/image6.jpg',
-    './images/Vulkan/image7.jpg',
-    './images/Vulkan/image8.jpg',
+    './images/Pertini/image1.jpg',
+    './images/Pertini/image2.jpg',
+    './images/Pertini/image3.jpg',
+    './images/Pertini/image4.jpg',
+    './images/Pertini/image5.jpg',
+    './images/Pertini/image6.jpg',
+    './images/Pertini/image7.jpg',
+    './images/Pertini/image8.jpg',
 ];
 
 const board = document.querySelector('.game-board');
