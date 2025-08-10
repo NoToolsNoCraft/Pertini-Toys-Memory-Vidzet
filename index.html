@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:title" content="Pertini Toys Igra Memorija" />
+	<meta property="og:description" content="Pertini Toys Igra Memorija" />
+	<meta property="og:image" content="https://raw.githubusercontent.com/NoToolsNoCraft/Vulkan/refs/heads/main/pertini-thumbnail.webp" />
+	<meta property="og:url" content="https://notoolsnocraft.github.io/Pertini/" />
+	<meta property="og:type" content="website" />
+
+	<title>Pertini Toys Memory Vidžet</title>
+
+	<!--ONLY Font Awesome 6.5 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="public/css/all.min.css">
+<style>
+    :root {
+      --primary-color: #ed1c24;
+      --secondary-color: #f0f4f8;
+      --card-bg: #ffffff;
+      --text-color: #333333;
+      --subtle-text-color: #666666;
+      --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.12);
+    }
+    
+    body {
+      font-family: 'Times New Roman', serif;
+      
+    }
+
+    /* Gornji baner */
+    .custom-top-banner {
+      background: linear-gradient(135deg, #e3000b 0%, #fed600 100%);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .custom-top-banner h1 {
+      font-size: 3em;
+      font-weight: 700;
+      margin-bottom: 15px;
+      letter-spacing: -0.5px;
+    }
+
+    .custom-top-banner p {
+      font-size: 1.2em;
+      font-weight: 400;
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    /* Gornji baner */
+    .custom-second-banner {
+      background: linear-gradient(135deg, #e3000b 0%, #fed600 100%);
+      color: white;
+      text-align: center;
+      padding: 20px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .custom-second-banner h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      letter-spacing: -0.5px;
+    }
+
+    /* Sekcije */
+    .custom-section-container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    /* Sekcija sa tri kolone */
+    .custom-three-column-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .custom-column {
+      flex: 1 1 100%;
+      padding: 30px;
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: var(--shadow-light);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .custom-column:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .custom-column h3 {
+      margin-bottom: 15px;
+      font-size: 1.5em;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    /* Stil za ikone */
+    .custom-column h3 i,
+    .custom-two-column h3 i {
+      margin-right: 12px;
+      font-size: 1.2em;
+      color: var(--primary-color);
+    }
+
+    .custom-column p {
+      font-size: 1.1em;
+      color: black;
+      text-align: justify;
+    }
+
+    /* Stil za liste */
+    .custom-column ul,
+    .custom-two-column ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .custom-column ul li,
+    .custom-two-column ul li {
+        margin-bottom: 8px;
+        font-size: 1.1em;
+        position: relative;
+        margin-left: 10%;
+    }
+
+    .custom-column ul li::before,
+    .custom-two-column ul li::before {
+        content: '\2022'; /* Unicode za bullet tačku */
+        color: black;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        position: absolute;
+        left: 0;
+    }
+    
+    /* Sekcija sa dve kolone */
+    .custom-two-column-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .custom-two-column {
+      flex: 1 1 100%;
+      background-color: var(--card-bg);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: var(--shadow-light);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .custom-two-column:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .custom-two-column h3 {
+      font-size: 1.5em;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+
+    .custom-two-column p {
+      font-size: 1.1em;
+      color: black;
+      margin-bottom: 1em;
+      text-align: justify;
+    }
+
+    /* Futer */
+    .custom-footer {
+      background-color: #e9ecef;
+      text-align: center;
+      padding: 50px 20px;
+      margin-top: 60px;
+    }
+
+    .custom-footer a.custom-linkedin-button {
+      display: inline-block;
+      padding: 14px 28px;
+      margin-bottom: 20px;
+      background-color: #0077b5;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0, 119, 181, 0.25);
+    }
+
+    .custom-footer a.custom-linkedin-button:hover {
+      background-color: #005b8a;
+      transform: translateY(-2px);
+    }
+
+    .custom-footer p {
+      font-size: 1em;
+      color: #000000;
+      font-weight: 300;
+    }
+
+    /* Responsive za tablete i veće ekrane */
+    @media (min-width: 768px) {
+      .custom-column {
+        flex: 1 1 calc(33.333% - 25px);
+      }
+      .custom-two-column {
+        flex: 1 1 calc(50% - 15px);
+      }
+    }
+
+    /* Veći naslovi za velike ekrane */
+    @media (min-width: 1024px) {
+      .custom-top-banner h1 {
+        font-size: 4em;
+      }
+      .custom-top-banner p {
+        font-size: 1.3em;
+      }
+      .custom-column h3,
+      .custom-two-column h3 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Gornji baner -->
+  <section class="custom-top-banner">
+    <h1>Pertini Memory Vidžet</h1>
+    <p>Specijalno osmišljeno za Pertini Toys, ovo interaktivno iskustvo povećava angažman korisnika i donosi vrednost kako brendu, tako i kupcima. Ovo nije obična igra — već merljiv marketinški alat.</p>
+  </section>
+
+  <!-- Tri kolone -->
+  <div class="custom-section-container">
+    <section class="custom-three-column-section">
+      <div class="custom-column">
+        <h3><i class="fas fa-gamepad"></i> Marketing kroz igru</h3>
+        <p>Memory igra privlači pažnju i zadržava korisnike. Za razliku od statičnih banera, ona podstiče ponovnu interakciju jer se oslanja na prirodnu znatiželju korisnika i želju da „završe izazov“.</p>
+      </div>
+      <div class="custom-column">
+        <h3><i class="fas fa-eye"></i> Vidljivost brenda</h3>
+        <p>Svaka kartica u igri može sadržati prilagođene slike, kao što su:</p>
+        <ul>
+            <li>Predmeti iz ponude</li>
+            <li>Pokloni ili sezonske akcije</li>
+            <li>Oznake brenda</li>
+        </ul>
+        <p>Svako okretanje kartice jača prepoznavanje proizvoda i pamćenje naslova koji se kasnije traže u prodavnici.</p>
+      </div>
+      <div class="custom-column">
+        <h3><i class="fas fa-store"></i> Povećana poseta prodavnici</h3>
+        <p>Nakon uspešnog završetka igre, korisnici dobijaju poziv na akciju, kao što su:</p>
+        <ul>
+            <li>Učešće u dobijanju popusta ili vaučera</li>
+            <li>Mogućnost korišćenja u fizičkoj ili online knjižari</li>
+        </ul>
+        <p>Time se direktno stimuliše poseta prodavnici, uz mogućnost praćenja rezultata.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Dve kolone -->
+  <div class="custom-section-container">
+    <section class="custom-two-column-section">
+      <div class="custom-two-column">
+        <h3><i class="fas fa-lightbulb"></i> Zašto ovo nije samo igra</h3>
+        <p>Iako izgleda kao igra, cilj joj je ozbiljan — da stvori kontakt između kupca i brenda. Ona kombinuje interakciju, edukaciju i nagrađivanje u jednom jednostavnom alatu, prilagođenom maloprodajnom marketingu. Naslovi se bolje pamte kada se vide, kliknu i igraju u kontekstu.</p>
+        <p>U pozadini, sistem beleži ponašanje korisnika i broj završenih igara, što daje marketinškim timovima uvid u to koji sadržaji najbolje rezoniraju sa publikom.</p>
+      </div>
+      <div class="custom-two-column">
+        <h3><i class="fas fa-puzzle-piece"></i> Zašto klizni panel, a ne popup?</h3>
+        <p>Igra se prikazuje putem nenametljivog kliznog panela, čime se postiže:</p>
+        <ul>
+            <li>Visoka angažovanost bez ometanja</li>
+            <li>Utisak da je prirodni deo sajta, a ne strano iskustvo</li>
+        </ul>
+        <p>Za razliku od popup prozora, koji prekidaju korisnika i često izazivaju frustraciju, klizni panel se pojavljuje sa strane samo kada je korisnik spreman da ga vidi. Korisnici to prepoznaju i pozitivno reaguju.</p>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- Dve kolone -->
+  <div class="custom-section-container">
+    <section class="custom-two-column-section">
+      <div class="custom-two-column">
+        <h3>Šta usluga uključuje</h3>
+        <p>
+          Mesečna naknada pokriva:
+        </p>
+        <ul>
+            <li>Održavanje aplikacije</li>
+            <li>Ažuriranje sadržaja i prilagođavanja vizuala (logo, boje, slike proizvoda, linkovi)</li>
+            <li>Tehnička podrška i dalji razvoj funkcionalnosti u skladu sa potrebama</li>
+        </ul>
+      </div>
+
+
+      <div class="custom-two-column">
+        <h3>Integracija i tehnologije</h3>
+        <p>Ovaj veb alat bi se nalazio na vašem vebsajtu, dakle bio bi integrisan direktno kao deo određene stranice ili stranica. Front end je rađen u osnovnim veb tehnologijama HTML, CSS i JS.</p>
+        <p>Za backend i server-side logiku, koristio bi se Node.js, Express i MongoDB što omogućava lako skaliranje i integraciju sa postojećim sistemima. Ukoliko vašim potrebama odgovaraju druge tehnologije, možemo ih razmotriti i prilagoditi rešenje.</p>
+      </div>
+    </section>
+  </div>
+
+  <section class="custom-second-banner">
+    <h1>Korisničko putovanje</h1>
+    
+  </section>
+
+   <!-- Tri kolone za Korisničko putovanje -->
+  <div class="custom-section-container">
+    <section class="custom-three-column-section">
+      <div class="custom-column">
+        <h3><i class="fas fa-mouse-pointer"></i> Korak 1: Interakcija</h3>
+        <p>Korisnik, privučen suptilnim i vizuelno privlačnim sticky dugmetom na dnu ekrana, klikne na njega da bi saznao više. Ovo je prvi korak u transformaciji pasivnog posetioca sajta u aktivnog učesnika u brendiranom iskustvu. Tekst dugmeta je način da se aplikacija inicijalno komunicira sa korisnikom.</p>
+      </div>
+      <div class="custom-column">
+        <h3><i class="fas fa-puzzle-piece"></i> Korak 2: Angažman</h3>
+        <p>Otvara se klizni panel sa "Memory" igrom. Korisnik okreće karte, pamti parove i uparuje ih. Kroz ovu igru, on se nesvesno upoznaje sa proizvodima, čime se jača prepoznavanje brenda i pamćenje proizvoda.</p>
+      </div>
+      <div class="custom-column">
+        <h3><i class="fas fa-gift"></i> Korak 3: Nagrada</h3>
+        <p>Nakon uspešno završene igre, iskače pop-up prozor sa konkretnim pozivom na akciju. To može biti ekskluzivni popust, vaučer za kupovinu ili poziv za prijavu na newsletter. Cilj je da se nagradom korisnik motiviše da pređe u sledeću fazu – kupovinu.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Futer -->
+  <footer class="custom-footer">
+    <a href="https://www.linkedin.com/in/petar-skrbic/" target="_blank" class="custom-linkedin-button">
+      Poveži se sa mnom na LinkedIn-u
+    </a>
+    <p>&copy; 2025 Petar Škrbić. Sva prava zadržana.</p>
+  </footer>
+
+
+
+
+	<button id="openGameButton" aria-label="Play Memory Game 🎮">🎮 Memoriši. Poveži. Osvoji</button>
+	<!-- Overlay + Slide-in Memory Game Panel -->
+<div id="memoryGameOverlay" class="memory-overlay" aria-hidden="true">
+  <aside id="memoryGamePanel" role="dialog" aria-modal="true" aria-labelledby="memoryGameTitle">
+    
+	<button class="close-btn" aria-label="Close Memory Game">
+		<i class="fas fa-times"></i>
+	</button>
+    <!-- Memory Game Content -->
+    
+	
+	<div class="container">
+
+	
+
+		<div class="internal">
+		<img src="pertinitoys-logo.png" alt="Herbalia Logo" class="logo">
+		<h1 id="memoryGameTitle">Igraj i osvoji</h1>
+
+		<div class = "dashboard">
+			<div class="dashboard-element">
+				<i class=" dashboard-icon fas fa-stopwatch"></i> <span id="timer"></span>
+			</div>
+			<div class="dashboard-element">
+				<i class=" dashboard-icon fas fa-clone"></i> <span id="moves"></span>
+			</div>
+			<div class="dashboard-element">
+				<i id = "reset" class="fas fa-redo-alt"></i> <span></span>
+			</div>
+
+			
+		</div>
+		
+		<div id="stars">
+			<i class="fas fa-star" id="rating-poor"></i>
+			<i class="fas fa-star" id="rating-average"></i>
+			<i class="fas fa-star" id="rating-perfect"></i>
+		</div>
+			
+
+		<div id="form" style="display: none;">
+			<input type="radio" id="type1Mode"
+				name="difficulty" value="type1" checked="checked">
+			<label class="checked" for="type1Mode">Herbalia</label>
+		</div>
+
+
+		<div class="game-board">
+            
+        </div>
+        <div id="startHint" class="start-hint">
+            <div class="arrow">⬆</div>
+            <div class="hint-text">Klikni ovde da započneš igru</div>
+        </div>
+        
+    </div>
+
+
+	<div class="modal hide">
+					<div class="modal-inner">
+						<h3>Fenomenalno urađeno!</h3>
+						<p class="modal-text">Rešili ste igru za <span id="final-time"></span> sekundi i <span id="final-moves"></span> poteza!</p>
+						<p class="modal-text" id="final-rating"></p>
+						<div id="result-form" style="margin-top: 20px;">
+							<h3>Osvoji nagradu!</h3>
+							<p>Unesi svoje podatke kako bismo ti poslali popust ili nagradu ako si među najboljima:</p>
+							<form id="submit-result-form">
+								<label for="name">Ime i prezime:</label><br />
+								<input type="text" id="name" name="name" required /><br /><br />
+								<label for="email">Email adresa:</label><br />
+								<input type="email" id="email" name="email" required /><br /><br />
+								<input type="hidden" id="game-time" name="gameTime" />
+								<input type="hidden" id="game-moves" name="gameMoves" />
+								<input type="hidden" id="game-score" name="gameScore" />
+								<button type="submit">Pošalji rezultat</button>
+								<p class="modal-text" id="replay"><i class="fas fa-redo-alt"></i> Igraj ponovo?</p>
+							</form>
+							<p id="thank-you-message" style="display: none; color: green; margin-top: 10px;">
+								Hvala! Tvoj rezultat je poslat.
+							</p>
+							
+						</div>
+						
+						
+						<div class="share-buttons">
+							<p>Tvoja memorija je sjajna! 🌿 Izazovi prijatelja i uporedite rezultate:</p>
+							<a id="shareFacebook" class="share-btn fb" target="_blank">📘 Facebook</a>
+							<a id="shareWhatsApp" class="share-btn wa" target="_blank">📱 WhatsApp</a>
+							<a id="shareViber" class="share-btn vb" target="_blank">📩 Viber</a>
+							<a id="shareTelegram" class="share-btn tg" target="_blank">🚀 Telegram</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</aside>
+	</div>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
